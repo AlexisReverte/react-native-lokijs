@@ -1,6 +1,6 @@
 {
   "name": "react-native-lokijs",
-  "version": "1.5.8",
+  "version": "1.5.9",
   "description": "Fast document oriented javascript in-memory database, usable with React Native.",
   "homepage": "http://lokijs.org",
   "main": "src/lokijs.js",
