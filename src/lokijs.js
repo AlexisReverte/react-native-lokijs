@@ -2378,11 +2378,11 @@
       this.fs.writeFile(tmpdbname, dbstring)
         .then(function () {
           // Remove existing file
-          return self.fs.exists(dbname).then(function (exists) {
-            if (exists) {
-              return self.fs.unlink(dbname);
-            }
-          });
+          return self.fs.exists(dbname);
+        }).then(function (exists) {
+          if (exists) {
+            return self.fs.unlink(dbname);
+          }
         }).then(function () {
           return self.fs.moveFile(
             tmpdbname,
